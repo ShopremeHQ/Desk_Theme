@@ -1,5 +1,5 @@
-app_name = "business_theme_hq"
-app_title = "Business Theme HQ"
+app_name = "Desk_Theme"
+app_title = "Desk_Theme"
 app_publisher = "Shopreme"
 app_description = "."
 app_email = "hello@shopreme.com"
@@ -27,7 +27,7 @@ app_license = "mit"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/business_theme_hq/css/business_theme_hq.css"
 ##app_include_js = "/assets/business_theme_hq/js/number_card.js"
-app_include_css = "/assets/business_theme_hq/css/xetheme.css"
+app_include_css = "/assets/Desk_Theme/css/xetheme.css"
 #web_include_css = "/assets/business_theme_hq/css/ntheme.css"
 
 # include js, css files in header of web template
