@@ -1,7 +1,7 @@
 [project]
 name = "Desk_Theme"
 authors = [
-    { name = "Mahmoud Naguib", email = "m.naguib@zamiltec.com"}
+    { name = "Dev Team", email = "hello@shopreme.ai"}
 ]
 description = "."
 requires-python = ">=3.10"
