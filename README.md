@@ -7,4 +7,4 @@ bench clear-cache
 
 #### License
 
-mit"# Theme" 
+Private
