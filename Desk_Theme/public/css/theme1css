@@ -1,0 +1,703 @@
+/* Works on Chrome, Edge, and Safari */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+:root {
+    --font-stack: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+body, html, * {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif !important;
+}
+
+.form-control, .input-with-feedback, .like-disabled-input {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.btn, .list-row, .page-title, .sidebar-label {
+    font-family: 'Lato', sans-serif !important;
+}
+
+
+
+
+*::-webkit-scrollbar {
+    width: 6px;
+}
+*::-webkit-scrollbar-track {
+    background: var(--scroll-bg);
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-color);
+    border-radius: 20px;
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-color) var(--scroll-bg);
+}
+.awesomplete .input-with-feedback {
+    border: 1px solid var(--border-color);
+}
+.form-control {
+    border: 1px solid var(--border-color);
+}
+.search-bar .awesomplete input {
+    background-color: var(--bg-color)
+}
+.modal-backdrop{
+    background-color: #2c436b !important;
+}
+.widget .widget-head .widget-title {
+    font-size: var(--text-base);
+}
+.comment-box .comment-input-header, .form-dashboard-section .section-head, .form-section .section-head, .head-title {
+    font-size: var(--text-base);
+    font-weight: 600;
+}
+.comment-box .comment-input-container .ql-editor {
+    border: 1px solid var(--border-color);
+}
+.duration-picker .duration-input {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+.control-label {
+    font-weight: 500;
+}
+[data-theme="dark"] {
+    --bg-color: var(--gray-900);
+    --disabled-control-bg: var(--gray-900);
+    --border-color: #1c2126;
+    --margin-lg : 15px;
+    --text-bold: 600;
+    --scroll-bg: #161a1f;
+    --scroll-color: #1c2126;
+}
+
+[data-theme="light"] {
+    --bg-color: #f2f5fa;
+    --text-bold: 600;
+    --control-bg : #fff;
+    --control-bg-on-gray: #d4dcea;
+    --disabled-control-bg: #f2f5fa;
+    --heading-color: #333;
+    --border-color:#e3e8f1;
+    --avatar-frame-bg: #dde2ea;
+    --margin-lg: 15px;
+    --sidebar-select-color: #d4dcea;
+    --awesomplete-hover-bg: #d4dcea;
+    --scroll-bg: #eef1f5;
+    --scroll-color: #d9dfe6;
+}
+
+
+/*****  OVERRIDDEN CSS  *****/
+
+/* Heading Text Color */
+/*
+.page-head{
+    background: #7C7BAD !important;
+    background: #7C7BAD !important;
+}
+.page-container{
+    background: url(/web_responsive/static/src/css/../img/home-menu-bg-overlay.svg), linear-gradient(to bottom, #7C7BAD, #c3c2cc); !important;
+    background-color: url(/web_responsive/static/src/css/../img/home-menu-bg-overlay.svg), linear-gradient(to bottom, #7C7BAD, #c3c2cc); !important;
+}
+h3.ellipsis.title-text,
+.widget-group .widget-group-head .widget-group-title,
+.layout-side-section .sidebar-label{
+    color: white !important;
+}
+
+*/
+/* Form Input Focus *//*
+
+input:focus{
+    border: 1px solid #7C7BAD !important;
+}
+.form-control:focus{
+    box-shadow: 0 0 0 2px rgba(94, 108, 162, 0.25) !important;
+}
+
+*/
+/* Div Padding *//*
+
+.widget.widget-shadow.shortcut-widget-box{
+    padding: 5px 10px;
+}
+
+*/
+/* List Design *//*
+
+.indicator-pill, .indicator-pill-right{
+    padding: 7px 8px;
+    height: unset;
+}
+
+*/
+/* Collapse Div Padding *//*
+
+.section-head.collapsed{
+    padding: 2px 4px;
+}
+
+*/
+/* Dropdown List Hover *//*
+
+.awesomplete > ul > li:hover, .awesomplete > ul > li[aria-selected="true"]{
+    background-color: #a492bf;
+}*/
+
+
+
+
+
+
+/* Global CSS */
+
+/* Colours */
+:root {
+    --background-color: #1e1e21;
+    --primary-color: #049c0c;
+    --secondary-color: #549cdc;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --gray-color: #888;
+
+    --page-head-height: 50px;
+    --navbar-height: 50px;
+}
+.btn-primary:active,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary:focus{
+    box-shadow: none !important;
+}
+.btn-primary{
+    color: #dfffff !important;
+    background-color: var(--primary-color) !important;
+    border-radius: 0 !important;
+}
+.btn-primary:hover{
+    background-color: #037a09 !important;
+}
+.btn-secondary{
+    background-color: #ffffff !important;
+    color: #000000!important;
+    border-radius: 0 !important;
+    transition: background-color ease-in-out .15s;
+}
+.btn-secondary:hover{
+    background-color: #549cdc !important;
+}
+.page-head,
+.page-head .page-head-content{
+    height: var(--page-head-height);
+}
+.page-head,
+.page-head .page-head-content{
+    top: var(--page-head-height);
+}
+
+
+
+/* Top Header */
+.navbar{
+    background: #ffffff !important;
+    height: var(--navbar-height);
+    border-bottom: 1px solid #e0e0e0;
+}
+.navbar-expand{
+    background-color: #ffffff;
+}
+.navbar, .navbar-home, header.navbar{
+    background: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+#navbar-breadcrumbs > li > a::before{
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    margin-right: .3em;
+    display: inline-block;
+
+    font-size: 24px;
+    transition: 0.2s;
+    position: relative;
+    top: 3px;
+    content: "\f105";
+    margin-right: 10px;
+    color: #36414c;
+}
+#navbar-breadcrumbs a{
+    color: #36414c;
+    text-decoration: none;
+}
+header .form-control{
+    color: #36414c;
+}
+header .form-control:focus{
+    border: 0;
+    background-color: var(--white-color) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.search-bar .awesomplete input{
+    height: 32px;
+    transition: all 0.3s ease;
+}
+.search-bar .awesomplete input:focus{
+    transform: scale(1.02);
+}
+/*#navbar-search{
+    width: 300px;
+    background-color: rgb(65, 78, 90);
+    border-radius: 0px;
+    color: #f9f9f9;
+    border: none;
+}*/
+header ul#navbar-breadcrumbs{
+    margin-top: -8px;
+}
+header .form-control:focus{
+    background-color: var(--white-color) !important;
+}
+
+
+
+
+/* Sidebar */
+.layout-side-section .sidebar-label{
+    color: var(--primary-color);
+}
+.sidebar-label svg,
+.layout-side-section .sidebar-label .icon{
+    stroke: var(--primary-color);
+}
+.list-sidebar-button{
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+}
+.list-sidebar-button:active,
+.list-sidebar-button:focus{
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+
+/* Input Fields */
+input{
+    border-radius: 0 !important;
+}
+.form-control, .input-with-feedback, textarea, select, .btn{
+    border-radius: 0 !important;
+}
+.form-control{
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    background-color: #f2f2f2 !important;
+}
+.form-control:focus{
+    outline: 0;
+    border: 1px solid var(--primary-color);
+    box-shadow: none;
+    background: rgba(4, 156, 12, 0.14) !important;
+}
+.navbar .navbar-nav a.nav-link{
+    color: #36414c;
+}
+/* Remove focus outline from logo */
+.navbar-brand,
+.app-logo,
+.navbar-brand:focus,
+.app-logo:focus,
+a.navbar-brand:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+span.notifications-seen use,
+symbol#icon-small-down{
+    fill: var(--white-color);
+}
+
+
+/* Table */
+.widget, .card, .modal-content, .dropdown-menu{
+    border-radius: 0 !important;
+}
+.form-grid{
+    border-radius: 0;
+    border: 1px solid #e0e0e0;
+}
+.form-grid .grid-heading-row{
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+.grid-heading-row{
+    border-bottom: 2px solid var(--primary-color);
+}
+.grid-row > .row .col{
+    border-right: 1px solid #e8e8e8;
+}
+.form-grid .grid-row:hover{
+    background: #f0f7f1;
+    transition: background 0.2s ease;
+}
+
+/* Heading Color */
+.head-title, .form-section .section-head, .form-dashboard-section .section-head, .comment-box .comment-input-header{
+    color: var(--primary-color);
+}
+
+/* Lists */
+.list-subject a{
+    text-decoration: none;
+    transition: 0.3s;
+}
+.list-subject a:hover{
+    color: var(--secondary-color);
+}
+
+
+/* Report Table */
+.datatable .dt-header .dt-cell--header .dt-cell__content{
+    background-color: #f8f9fa;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+}
+/* Modern Link Styling */
+a{
+    color: #549cdc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover{
+    color: #049c0c;
+    text-decoration: none;
+}
+a:focus{
+    outline: 2px solid rgba(4, 156, 12, 0.3);
+    outline-offset: 2px;
+}
+/* Status Badges - Keep Rounded */
+.indicator-pill, .indicator-pill-right, .badge, .label{
+    border-radius: 12px !important;
+}
+/* Modern Shadows for Depth */
+.widget, .card, .frappe-card{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+    transition: box-shadow 0.3s ease;
+}
+.widget:hover, .card:hover, .frappe-card:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+}
+.modal-content{
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+/* Typography Hierarchy */
+.page-title, .page-head-content .title{
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+}
+.section-head, .form-section .section-head{
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+.control-label{
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+/* Dropdown Menu Styling */
+.dropdown-menu{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+.dropdown-menu .dropdown-item{
+    padding: 0.5rem 1rem;
+    transition: background 0.2s ease;
+}
+.dropdown-menu .dropdown-item:hover{
+    background-color: rgba(4, 156, 12, 0.08);
+    color: #049c0c;
+}
+/* Filter Icon Styling
+.filter-icon, 
+button[data-original-title="Filter"] svg,
+.chart-actions .icon-filter,
+.widget-head .widget-control .icon-filter{
+    stroke: #36414c !important;
+    fill: none !important;
+    stroke-width: 2px;
+    transition: all 0.3s ease;
+}
+.filter-icon:hover,
+button[data-original-title="Filter"]:hover svg,
+.chart-actions .icon-filter:hover{
+    stroke: #049c0c !important;
+    transform: scale(1.1);
+} */
+/* Filter Icon - Frameless Black
+button.btn.btn-xs.filter-button,
+.filter-button{
+    background-color: transparent !important;
+    border: none !important;
+    padding: 6px 8px !important;
+    box-shadow: none !important;
+}
+
+.filter-button .filter-icon,
+.filter-button .filter-icon svg,
+.filter-button svg.icon{
+    stroke: #000000 !important;
+    fill: none !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.filter-button:hover{
+    opacity: 0.7;
+    background-color: transparent !important;
+} */
+Buttons CSS
+/* .filter-button,
+.sort-selector-button,
+.btn-order{
+    background-color: #549cdc !important;
+    color: var(--white-color) !important;
+    transition: 0.3s;
+    border-radius: 0 !important;
+}
+.filter-button:hover,
+.sort-selector-button:hover,
+.btn-order:hover{
+    background-color: #4080c4 !important;
+}
+.filter-button span.filter-icon{
+    color: var(--white-color);
+}
+.filter-button span.filter-icon svg.icon{
+    stroke: var(--white-color);
+} */
+/* Smooth Transitions for Modern Feel */
+.btn, .list-row, .grid-row, .form-control{
+    transition: all 0.2s ease-in-out;
+}
+.sidebar-label{
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.sidebar-label:hover{
+    transform: translateX(2px);
+}
+.list-subject a{
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.list-subject a:hover{
+    transform: translateX(3px);
+}
+
+/* Enhanced Widget Icon Styling */
+.widget .widget-icon,
+.number-card-icon {
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    float: right !important;
+    margin-top: -8px !important;
+    font-size: 20px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Ensure icon colors work properly */
+.widget .widget-icon.green {
+    background: rgba(4, 156, 12, 0.1) !important;
+    color: var(--primary-color) !important;
+}
+
+.widget .widget-icon.blue {
+    background: rgba(84, 156, 220, 0.1) !important;
+    color: var(--secondary-color) !important;
+}
+
+.widget .widget-icon.red {
+    background: rgba(220, 53, 69, 0.1) !important;
+    color: var(--danger-color) !important;
+}
+
+.widget .widget-icon.orange {
+    background: rgba(255, 136, 0, 0.1) !important;
+    color: var(--warning-color) !important;
+}
+
+.widget .widget-icon.purple {
+    background: rgba(155, 89, 182, 0.1) !important;
+    color: #9b59b6 !important;
+}
+
+.widget .widget-icon.yellow {
+    background: rgba(255, 193, 7, 0.1) !important;
+    color: #ffc107 !important;
+}
+
+/* Adjust widget content to accommodate icon */
+.widget .widget-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+/* Button Icons - Hide existing SVG icons first */
+/* Hide SVG icons in specific action buttons */
+button[data-action="save"] svg,
+button[data-action="save"] .icon,
+button[data-action="save"] .frappe-icon,
+button[data-action="delete"] svg,
+button[data-action="delete"] .icon,
+button[data-action="delete"] .frappe-icon,
+button[data-action="submit"] svg,
+button[data-action="submit"] .icon,
+button[data-action="submit"] .frappe-icon,
+button[data-action="new"] svg,
+button[data-action="new"] .icon,
+button[data-action="new"] .frappe-icon,
+button.btn[data-label*="Save"] svg,
+button.btn[data-label*="save"] svg,
+button.btn[data-label*="Save"] .icon,
+button.btn[data-label*="save"] .icon,
+button.btn[data-label*="Delete"] svg,
+button.btn[data-label*="delete"] svg,
+button.btn[data-label*="Delete"] .icon,
+button.btn[data-label*="delete"] .icon,
+button.btn[data-label*="Submit"] svg,
+button.btn[data-label*="submit"] svg,
+button.btn[data-label*="Submit"] .icon,
+button.btn[data-label*="submit"] .icon,
+button.btn[data-label*="New"] svg,
+button.btn[data-label*="new"] svg,
+button.btn[data-label*="New"] .icon,
+button.btn[data-label*="new"] .icon,
+a.btn[data-label*="New"] svg,
+a[data-label*="New"] svg,
+a.btn[data-label*="New"] .icon,
+a[data-label*="New"] .icon {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Save Button - Floppy Disk Icon */
+button[data-action="save"]::before,
+button.btn[data-label="Save"]::before,
+button.btn-primary[data-label="Save"]::before,
+.btn-primary[data-label="Save"]::before,
+button.btn[data-label*="Save"]::before,
+button.btn[data-label*="save"]::before {
+    font-family: FontAwesome !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-decoration: inherit !important;
+    -webkit-font-smoothing: antialiased !important;
+    content: "\f0c7" !important; /* floppy-disk */
+    margin-right: 8px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* Delete Button - Trash Icon */
+button[data-action="delete"]::before,
+button.btn-danger[data-label="Delete"]::before,
+button.btn[data-label="Delete"]::before,
+.btn-danger[data-label="Delete"]::before,
+button.btn[data-label*="Delete"]::before,
+button.btn[data-label*="delete"]::before,
+button.btn-danger[data-label*="Delete"]::before {
+    font-family: FontAwesome !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-decoration: inherit !important;
+    -webkit-font-smoothing: antialiased !important;
+    content: "\f1f8" !important; /* trash */
+    margin-right: 8px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* Submit Button - Paper Plane Icon */
+button[data-action="submit"]::before,
+button.btn[data-label="Submit"]::before,
+button.btn-primary[data-label="Submit"]::before,
+.btn-primary[data-label="Submit"]::before,
+button.btn[data-label*="Submit"]::before,
+button.btn[data-label*="submit"]::before {
+    font-family: FontAwesome !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-decoration: inherit !important;
+    -webkit-font-smoothing: antialiased !important;
+    content: "\f1d8" !important; /* paper-plane */
+    margin-right: 8px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* New Button - Plus Icon */
+button[data-action="new"]::before,
+button.btn[data-label="New"]::before,
+button.btn-primary[data-label="New"]::before,
+a.btn[data-label="New"]::before,
+a[data-label="New"]::before,
+.btn-primary[data-label="New"]::before,
+button.btn[data-label*="New"]::before,
+button.btn[data-label*="new"]::before,
+a.btn[data-label*="New"]::before,
+a[data-label*="New"]::before {
+    font-family: FontAwesome !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-decoration: inherit !important;
+    -webkit-font-smoothing: antialiased !important;
+    content: "\f067" !important; /* plus */
+    margin-right: 8px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* Additional targeting for ERPnext button containers */
+/* Hide SVG in page actions and form actions */
+.page-actions button.btn svg,
+.page-actions a.btn svg,
+.form-actions button.btn svg,
+.form-actions a.btn svg,
+.page-actions button.btn .icon,
+.page-actions a.btn .icon,
+.form-actions button.btn .icon,
+.form-actions a.btn .icon {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Add icons to buttons in common ERPnext containers */
+.page-actions button.btn-primary:first-child::before,
+.form-actions button.btn-primary:first-child::before {
+    font-family: FontAwesome !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-decoration: inherit !important;
+    -webkit-font-smoothing: antialiased !important;
+    content: "\f0c7" !important; /* floppy-disk for Save */
+    margin-right: 8px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+}
