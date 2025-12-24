@@ -1,6 +1,6 @@
-## Business Theme HQ
+## Desk_Theme
 
-change business_theme_hq/public/css/business_theme_hq.css
+Themeing App for Shopreme Manager Desk
 Run:
 bench build
 bench clear-cache
